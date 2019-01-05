@@ -5,22 +5,15 @@
       <div class="" v-for="desc in data.description">
         <h5 v-if="desc.name">{{desc.name}}</h5>
         <span v-if="desc.level">{{desc.level}}</span>
-        <div class="" v-if="desc.description.length > 1">
-          <ul>
-            <li v-for="d in desc.description">
-              <p>{{d}}</p>
-            </li>
-          </ul>
-        </div>
-        <div class="" v-else>
-          <p>{{desc.description[0]}}</p>
-        </div>
+        <OneLineCard v-for="d in desc.description" v-if="desc.description.length > 1" :text="d" :key="d"></OneLineCard>
+        <OneLineCard v-else :text="desc.description[0]"></OneLineCard>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import OneLineCard from './OneLineCard.vue'
 import {skills} from '../api'
 
 export default {
@@ -29,6 +22,7 @@ export default {
       skills: []
     }
   },
+  components: {OneLineCard},
   created() {
     console.log('skills')
     skills.fetch().then(list=>{

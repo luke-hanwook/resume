@@ -57,7 +57,7 @@ export default {
         },
         {
           name: 'others',
-          level: 'row',
+          level: 'low',
           description: [
             'LINUX: 자주 쓰이는 명령어외에 Document를 참조하여 활용할 수 있습니다.',
             'ELASTIC SEARCH: Document를 참조하여 실제 운영중인 웹 서비스에 검색엔진을 적용한 경험이 있습니다.'

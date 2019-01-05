@@ -15,14 +15,10 @@
         <div class="" v-for="p in d.project">
           <h3>{{p.name}}</h3>
           <span>{{p.description}}</span>
-          <list
-            :title="title[0]"
-            :data="p.works"
-          ></list>
-          <list
-            :title="title[1]"
-            :data="p.skill_stack"
-          ></list>
+          <h5>{{title[0]}}</h5>
+          <OneLineCard v-for="task in p.works" :text="task" :key="task"></OneLineCard>
+          <h5>{{title[1]}}</h5>
+          <OneLineCard v-for="s in p.skill_stack" :text="s" :key="s"></OneLineCard>
         </div>
       </div>
     </div>
@@ -31,7 +27,7 @@
 </template>
 <script>
 import {career} from '../api'
-import List from './List.vue'
+import OneLineCard from './OneLineCard.vue'
 
 export default {
   data() {
@@ -40,9 +36,7 @@ export default {
       data: []
     }
   },
-  components: {
-    'list' : List
-  },
+  components: { OneLineCard },
   created() {
     console.log('career')
     career.fetch().then(list=>{
