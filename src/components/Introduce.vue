@@ -1,9 +1,11 @@
 <template>
-  <p>{{data}}</p>
+  <div class="">
+    <p>{{data}}</p>
+  </div>
 </template>
 
 <script>
-import Introduce from '../models/Introduce.js'
+import {introduce} from '../api'
 
 export default {
   data() {
@@ -12,8 +14,9 @@ export default {
     }
   },
   created() {
-    Introduce.list().then(data=>{
-      this.data = data
+    console.log('introduce')
+    introduce.fetch().then(list=>{
+      this.data = list
     })
   }
 }

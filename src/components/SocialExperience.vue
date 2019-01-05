@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="">
     <div class="" v-for="d in data">
       <h3>{{d.title}}</h3>
       <span>{{d.period}}</span>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import SocialExperience from '../models/SocialExperience.js'
+import {social} from '../api'
 
 export default {
   data() {
@@ -18,8 +18,9 @@ export default {
     }
   },
   created() {
-    SocialExperience.list().then(data=>{
-      this.data = data
+    console.log('social')
+    social.fetch().then(list=>{
+      this.data = list
     })
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="">
     <div class="" v-for="data in skills">
       <h3>{{data.title}}</h3>
       <div class="" v-for="desc in data.description">
@@ -21,7 +21,8 @@
 </template>
 
 <script>
-import Skills from '../models/Skills.js'
+import {skills} from '../api'
+
 export default {
   data() {
     return {
@@ -29,8 +30,9 @@ export default {
     }
   },
   created() {
-    Skills.list().then(data=>{
-      this.skills = data
+    console.log('skills')
+    skills.fetch().then(list=>{
+      this.skills = list
     })
   }
 }

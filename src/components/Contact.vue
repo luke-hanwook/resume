@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="row">
-    <div class="" v-for="d in data">
+  <div class="">
+    <div class="" v-for="d in data" :key="d.name">
       <span>{{d.name}}</span>
       <span>{{d.url}}</span>
       <span>{{d.type}}</span>
@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import Contact from '../models/Contact.js'
+import {contact} from '../api'
+
 export default {
   data() {
     return {
@@ -17,8 +18,9 @@ export default {
     }
   },
   created() {
-    Contact.list().then(data=>{
-      this.data = data
+    console.log('contact')
+    contact.fetch().then(list=>{
+      this.data = list
     })
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="">
     <div v-for="d in data">
       <div class="row-left">
         <h3>{{d.company}}</h3>
@@ -27,9 +27,10 @@
       </div>
     </div>
   </div>
+
 </template>
 <script>
-import WorkExperience from '../models/WorkExperience.js'
+import {career} from '../api'
 import List from './List.vue'
 
 export default {
@@ -43,7 +44,8 @@ export default {
     'list' : List
   },
   created() {
-    WorkExperience.list().then(list=>{
+    console.log('career')
+    career.fetch().then(list=>{
       this.data = list
     })
   }
