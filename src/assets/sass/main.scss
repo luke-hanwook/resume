@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR');
+
+$foundation-palette: (
+  primary: #009688,
+  mars: #D7525C,
+  saturn: #E4B884,
+  neptune: #5147D7
+);
+
+$title-font: 'Nanum Myeongjo', serif;
+$box-shadow: 0 2px 2px rgba(0, 0, 0, .1), 0 1px 0 rgba(0, 0, 0, .1);
+
+@each $selector, $color, $i in $foundation-palette {
+  $i: index($foundation-palette, $selector $color);
+
+  ##{$selector}, .#{$selector} {
+    transition: all .3s;
+    background-color: $color;
+  }
+
+  .#{$selector}-background {
+    background-color: $color;
+  }
+
+  .#{$selector}-line {
+    border-bottom: 1px solid $color;
+  }
+
+  .#{$selector}-font {
+    color: $color;
+    text-decoration: none;
+  }
+
+  .#{$selector}-font:hover {
+    color: black;
+  }
+
+  .fade#{$i}-enter-active, .fade#{$i}-leave-active {
+    transition: all .3s;
+  }
+  .fade#{$i}-enter, .fade#{$i}-leave-to {
+  /* .fade-leave-active below version 2.1.8 */
+    transform: translateX($i * 1.2rem);
+    opacity: 0;
+  }
+
+}
+
+.color {
+  display: flex;
+  float: right;
+  margin: 1.2rem;
+  span {
+    margin: 2px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: .1rem solid #EAEAEA;
+    cursor: pointer;
+  }
+}
+
+.fixed-color-circle {
+  background: #b3cae5;
+  /* FF3.6+ */
+  background: -moz-linear-gradient(-45deg, map-get($foundation-palette, primary) 12%
+                                  , map-get($foundation-palette, mars) 46%
+                                  , map-get($foundation-palette, saturn) 70%
+                                  , #f7ddbb 94%
+                                  , #efcab2 100%);
+  /* Chrome,Safari4+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(12%, map-get($foundation-palette, primary))
+              , color-stop(46%, map-get($foundation-palette, mars))
+              , color-stop(70%, map-get($foundation-palette, saturn))
+              , color-stop(94%, map-get($foundation-palette, neptune))
+              , color-stop(100%, #efcab2));
+  /* Chrome10+,Safari5.1+ */
+  background: -webkit-linear-gradient(-45deg, map-get($foundation-palette, primary) 12%
+              , map-get($foundation-palette, mars) 46%
+              , map-get($foundation-palette, saturn) 70%
+              , map-get($foundation-palette, neptune) 94%
+              , #efcab2 100%);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(-45deg, map-get($foundation-palette, primary) 12%
+              , map-get($foundation-palette, mars) 46%
+              , map-get($foundation-palette, saturn) 70%
+              , map-get($foundation-palette, neptune) 94%
+              , #efcab2 100%);
+  /* IE10+ */
+  background: -ms-linear-gradient(-45deg, map-get($foundation-palette, primary) 12%
+              , map-get($foundation-palette, mars) 46%
+              , map-get($foundation-palette, saturn) 70%
+              , map-get($foundation-palette, neptune) 94%
+              , #efcab2 100%);
+  /* W3C */
+  background: linear-gradient(135deg, map-get($foundation-palette, primary) 12%
+              , map-get($foundation-palette, mars) 46%
+              , map-get($foundation-palette, saturn) 70%
+              , map-get($foundation-palette, neptune) 94%
+              , #efcab2 100%);
+}
+
+html {
+  padding-bottom: 5rem;
+}
+
+body {
+  padding-bottom: 3rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+header {
+  margin-bottom: 1.5rem;
+  box-shadow: $box-shadow;
+  nav {
+    max-width: 50rem;
+    margin: auto;
+    ul {
+      display: inline;
+      padding: 0;
+      li {
+        display: inline-block;
+        list-style: none;
+        .nav-tab {
+          cursor: pointer;
+          color: white;
+          line-height: 60px;
+          padding: 0 30px;
+        }
+        .nav-tab:hover {
+          color: rgba(0, 0, 0, .8);
+        }
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 50rem;
+  margin: auto;
+}
+
+section {
+  padding: 0px 20px;
+}
+
+.intro {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  .luke {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin-right: 1rem;
+    border: 1px solid black;
+    background-image: url("/src/assets/image/luke.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+.title {
+  font-family: $title-font;
+}
+
+.row {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  div {
+    flex-basis: 0;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    margin: 1rem 0 .7rem;
+  }
+  .flex-item-left {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    span, p {
+      font-size: .8rem;
+    }
+  }
+  .flex-item-right {
+    padding-right: 1rem;
+    flex-grow: 3;
+    h5 {
+      font-size: 1.3rem;
+      margin: 1rem 0 .7rem;
+    }
+  }
+}
+
+.not-flex-container {
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 .7rem;
+  }
+  span {
+    font-size: .8rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+    margin: 1rem 0 .7rem;
+  }
+}
+
+.tag-card {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: .2rem;
+  margin: .1rem;
+  box-shadow: $box-shadow;
+}
+
+.level {
+  display: inline-block;
+  color: white;
+  border-radius: 5px;
+  padding: .2rem;
+  margin: .1rem;
+}
