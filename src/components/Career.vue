@@ -1,8 +1,8 @@
 <template lang="html">
-  <div class="">
+  <section>
     <workexperience></workexperience>
     <socialexperience></socialexperience>
-  </div>
+  </section>
 </template>
 
 <script>

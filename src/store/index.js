@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    componentType: 'introduce'
+    componentType: 'introduction',
+    mainColor: 'primary'
   },
   mutations: {
     CHANGE_COMPONENT(state, type) {
       state.componentType = type
+    },
+    CHANGE_MAIN_COLOR(state, color) {
+      state.mainColor = color
     }
   }
 })

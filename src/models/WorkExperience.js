@@ -1,31 +1,13 @@
 export default {
   data: [
     {
-      sort: 1,
-      company: 'NHN Technology Service',
-      sub: '(현)N tech Service',
-      url: 'https://www.nts-corp.com/nts/index.nhn',
-      position: 'Software Test Engineer',
-      period: '2016. 07 - 2016. 08',
-      period_num: '2',
-      description: '하계인턴 (Naver에서 서비스 중인 웹 및 모바일 애플리케이션 테스트)',
-      project: [
-        {
-          name: 'Arcade 서비스 테스팅',
-          description: '',
-          works: [],
-          skill_stack: []
-        }
-      ]
-    },
-    {
       sort: 2,
       company: '스톤인테그리티',
       sub: 'STONE INTEGRITY',
       url: 'https://stoneitgt.com/',
       position: 'Full-Stack WEB Developer',
       period: '2017. 11 - 2018. 11',
-      period_num: '1, 1',
+      period_num: '1년 1개월',
       description: '웹 애플리케이션 개발 (프론트엔드/백엔드)',
       project: [
         {
@@ -71,6 +53,24 @@ export default {
           skill_stack: [
             'Spring boot', 'Vue.js', 'mybatis', 'oracle', 'gradle', 'git'
           ]
+        }
+      ]
+    },
+    {
+      sort: 2,
+      company: 'NHN Technology Service',
+      sub: '(현)N tech Service',
+      url: 'https://www.nts-corp.com/nts/index.nhn',
+      position: 'Software Test Engineer',
+      period: '2016. 07 - 2016. 08',
+      period_num: '2개월',
+      description: '하계인턴 (Naver에서 서비스 중인 웹 및 모바일 애플리케이션 테스트)',
+      project: [
+        {
+          name: 'Arcade 서비스 테스팅',
+          description: '소프트웨어 테스팅',
+          works: ['팀 단위 개발 : 외부 디자인(외주) 변경에 따른 웹 사이트 개발(본인 외 1명)'],
+          skill_stack: ['software testing']
         }
       ]
     }

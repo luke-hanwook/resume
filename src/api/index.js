@@ -24,7 +24,7 @@ export const skills = {
   }
 }
 
-export const introduce = {
+export const introduction = {
   fetch() {
     return request('Introduce')
   }

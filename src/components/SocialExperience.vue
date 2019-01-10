@@ -1,11 +1,11 @@
 <template>
-  <div class="">
-    <div class="" v-for="d in data">
-      <h3>{{d.title}}</h3>
+  <article>
+    <div class="row not-flex-container" v-for="d in data">
+      <h3 class="title">{{d.title}}</h3>
       <span>{{d.period}}</span>
       <p>{{d.description}}</p>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

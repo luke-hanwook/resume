@@ -1,21 +1,43 @@
 <template lang="html">
-  <div class="" @click.prevent="change">
-    <a>career</a>
-    <a>skills</a>
-    <a>contact</a>
-  </div>
+  <nav>
+    <ul @click.prevent="change">
+      <li>
+        <div class="nav-tab">
+          Introduction
+        </div>
+      </li>
+      <li>
+        <div class="nav-tab">
+          Career
+        </div>
+      </li>
+      <li>
+        <div class="nav-tab">
+          Skills
+        </div>
+      </li>
+    </ul>
+    <colormenu></colormenu>
+  </nav>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
+import colormenu from './ColorMenu.vue'
 
 export default {
+  computed: {
+    ...mapState({
+      mainColor : 'mainColor'
+    })
+  },
+  components: {colormenu},
   methods: {
     ...mapMutations ([
       'CHANGE_COMPONENT'
     ]),
     change(e) {
-      this.CHANGE_COMPONENT(e.target.text)
+      this.CHANGE_COMPONENT(e.target.innerHTML.trim().toLowerCase())
     }
   }
 }
