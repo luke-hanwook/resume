@@ -36,7 +36,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          publicPath: './static/image',
+          publicPath: './',
           name: '[name].[ext]?[hash]'
         }
       }
