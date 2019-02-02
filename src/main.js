@@ -4,11 +4,10 @@ import App from './App.vue'
 import store from './store'
 import Meta from 'vue-meta'
 
+Vue.use(Meta)
 import 'normalize.css'
 import '@/assets/sass/main.scss'
 import '@/assets/sass/media.scss'
-
-Vue.use(Meta)
 
 new Vue({
   el: '#app',

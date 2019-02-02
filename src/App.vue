@@ -21,6 +21,19 @@ import { mapState, mapMutations } from 'vuex'
 
 export default {
   name: 'app',
+  metaInfo: {
+    title: '웹 이력서 - 김한욱',
+    meta: [
+      {'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {name: 'description', content: '주니어 개발자 김한욱의 웹 이력서 입니다.'},
+      {property: 'og:title', content: '웹 이력서 - 김한욱'},
+      {property: 'og:type', content: 'website'},
+      {property: 'og:url', content: 'https://luke-hanwook.github.io/resume/'},
+      // {property: 'og:image', content: ''},
+      {property: 'og:description', content: '주니어 개발자 김한욱의 웹 이력서 입니다.'}
+    ]
+  },
   components: { introduce, career, skills, navbar },
   data () {
     return {
