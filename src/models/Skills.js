@@ -4,6 +4,16 @@ export default {
       title: 'Technical skills',
       description: [
         {
+          name: 'Java Script',
+          level: 'middle',
+          description: [
+            '자바스크립트만의 특징을 이해하며 개발에 적용할 수 있습니다.',
+            '각종 JS 라이브러리 사용 시 Document를 읽고 분석하여 커스터마이징이 가능합니다.',
+            '실무에서 보편적으로 jQuery를 사용하였지만, Vanilla JS로의 구현도 가능합니다.',
+            '모던한 프론트엔드 개발환경을 지향합니다. (ES6와 vue.js의 실무 개발경험)'
+          ]
+        },
+        {
           name: 'Java',
           level: 'middle',
           description: [
@@ -14,23 +24,12 @@ export default {
           ]
         },
         {
-          name: 'Java Script',
-          level: 'middle',
-          description: [
-            '각종 JS 라이브러리 사용 시 Document를 읽고 분석하여 커스터마이징이 가능합니다.',
-            '자바스크립트만의 특징을 이해하며 개발에 적용할 수 있습니다.',
-            'JQuery에 아주 익숙하며 Vanilla JS로의 구현도 가능합니다.',
-            '모던 프론트엔드 개발을 지향합니다. (ES6와 vue.js의 실무 개발경험)'
-          ]
-        },
-        {
           name: 'HTML/CSS',
           level: 'middle',
           description: [
-            'HTML과 CSS의 표준 가이드라인을 준수합니다.',
-            '웹 페이지의 Search Engine Optimization의 실무 경험이 있습니다.',
-            '반응형 웹과 크로스 브라우징을 적용할 수 있습니다.',
-            'CSS Preprocessor(Sass)의 문법을 알고 사용할 수 있습니다.'
+            'HTML과 CSS의 표준 가이드라인을 확인하고 구현할 수 있습니다.',
+            '반응형 웹과 크로스 브라우징을 이해하고 적용할 수 있습니다.',
+            'CSS Preprocessor(Sass)의 문법을 이해하며 적용할 수 있습니다.'
           ]
         },
         {
@@ -70,14 +69,14 @@ export default {
           description: [
             '타 부서 혹은 직원간 서로의 업무에 대해 존중하며, 협력하여 좋은 결과를 이끌어 낼 수 있도록 노력합니다.',
             '의견 충돌 시 서로 다른 의견을 더 나은 의견으로 변화시키려 노력합니다.',
-            '피드백 받는 것에 대해 거리낌이 없습니다. 진심어린 피드백은 최고의 성장 비타민이라 생각합니다.'
+            '피드백 받는 것에 대해 거리낌이 없습니다. 진심어린 피드백은 최고의 성장 비타민이라 생각합니다.',
+            '에러 문구 혹은 영어로 된 문서를 읽고 개발에 적용할 수 있습니다.'
           ]
         },
         {
           name: 'Attitude',
           level: '',
           description: [
-            '9시 1분은 9시가 아닙니다. 즉 시간약속을 잘 지킵니다.',
             '기본소양을 토대로 새로움을 탐험하는 것을 즐깁니다.',
             '남에게 듣는 것 남에게 알려주는 것 모두 좋아합니다.',
             '운동과 먹는것을 통해 스스로 건강을 챙깁니다.'

@@ -1,6 +1,6 @@
 <template>
   <article>
-    <div v-for="d in data" :class="`flex-container row ${mainColor}-line`">
+    <div v-for="d in data" :class="`flex-container row ${mainColor}-line`" :key="d.company">
       <div class="flex-item-left">
         <h3 class="title">{{d.company}}</h3>
         <a :class="`${mainColor}-font`" :href="d.url" target="_blank">{{d.sub}}</a>
@@ -10,7 +10,7 @@
         <p>{{d.description}}</p>
       </div>
       <div class="flex-item-right">
-        <div class="" v-for="p in d.project">
+        <div class="" v-for="p in d.project" :key="p.name">
           <h4 class="title">{{p.name}}</h4>
           <span>{{p.description}}</span>
           <!-- <div class=""> -->

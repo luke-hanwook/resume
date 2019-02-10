@@ -1,6 +1,6 @@
 <template>
   <article>
-    <div class="row not-flex-container" v-for="d in data">
+    <div class="row not-flex-container" v-for="d in data" :key="d.title">
       <h3 class="title">{{d.title}}</h3>
       <span>{{d.period}}</span>
       <p>{{d.description}}</p>

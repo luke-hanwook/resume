@@ -11,18 +11,16 @@ export default {
       description: '웹 애플리케이션 개발 (프론트/백 엔드)',
       project: [
         {
-          name: '국립민속박물관 민속현장조사 사용자(WEB)',
-          period: '2017. 11 - 2018. 1',
-          description: '웹 애플리케이션 리뉴얼 개발(팀 2명)',
+          name: 'STONE Q (문제풀이, 성적관리 시스템)',
+          period: '2018. 5 - 2018. 6',
+          description: '웹 애플리케이션 개발(팀 2명)',
           works: [
-            'JS 기반 라이브러리 커스터마이징(WEB VR, Echart.js, Google Map, tui.editor, flexsheet.js 등)',
-            '웹 접근성, 검색엔진최적화(SEO) 등을 고려하여 HTML구조 재 설계',
-            '테스트 엔지니어 경험으로 통합 테스트 진행시 리드(화이트박스 테스팅, 크로스 브라우징)',
-            '검색 기능을 검색엔진(Elastic Search)을 통한 검색으로 변경하는 작업 진행'
+            'Vuex, Vue-Router 등 Vue.js 관련 라이브러리 사용 경험',
+            '팀 단위 컴포넌트 개발 경험',
+            'REST API URI 디자인 및 구현'
           ],
           skill_stack: [
-            'Spring MVC', 'Jsp', 'Jstl', 'jQuery', 'Mybatis', 'Oracle', 'Elastic Search',
-            'Maven', 'git'
+            'Spring boot', 'Vue.js', 'Sass', 'mybatis', 'oracle', 'gradle', 'Webpack', 'git'
           ]
         },
         {
@@ -42,16 +40,18 @@ export default {
           ]
         },
         {
-          name: 'STONE Q (문제풀이, 성적관리 시스템)',
-          period: '2018. 5 - 2018. 6',
-          description: '웹 애플리케이션 개발(팀 2명)',
+          name: '국립민속박물관 민속현장조사 사용자(WEB)',
+          period: '2017. 11 - 2018. 1',
+          description: '웹 애플리케이션 리뉴얼 개발(팀 2명)',
           works: [
-            'Vuex, Vue-Router 등 Vue.js 관련 라이브러리 사용 경험',
-            '팀 단위 컴포넌트 개발 경험',
-            'REST API URI 디자인 및 구현'
+            '검색 기능을 검색엔진(Elastic Search)을 통한 검색으로 변경하는 작업 진행',
+            'JS 기반 라이브러리 커스터마이징(WEB VR, Echart.js, Google Map, tui.editor, flexsheet.js 등)',
+            '웹 접근성, 검색엔진최적화(SEO) 등을 고려하여 HTML구조 재 설계',
+            '테스트 엔지니어 경험으로 통합 테스트 진행시 리드(화이트박스 테스팅, 크로스 브라우징)'
           ],
           skill_stack: [
-            'Spring boot', 'Vue.js', 'Sass', 'mybatis', 'oracle', 'gradle', 'Webpack', 'git'
+            'Spring MVC', 'Jsp', 'Jstl', 'jQuery', 'Mybatis', 'Oracle', 'Elastic Search',
+            'Maven', 'git'
           ]
         }
       ]
@@ -67,13 +67,12 @@ export default {
       description: '글로벌 테스트실/테스트 엔지니어 하계인턴',
       project: [
         {
-          name: 'Arcade 서비스 테스팅',
+          name: '웹과 모바일 서비스 테스팅',
           description: '소프트웨어 테스팅',
           works: [
             '네이버에서 실제 서비스되는 웹과 모바일의 테스트를 진행',
             '테스트케이스 작성 및 개발자와 테스터의 협업 경험',
             '테스트 방법론 및 자동화 테스팅 경험'
-
           ],
           skill_stack: ['WhiteBox testing', 'Cross Browsing']
         }

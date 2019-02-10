@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="intro">
-      <div class="luke"></div>
+      <div :class="`luke ${mainColor}-border`"></div>
       <h1 class="title">{{ newmsg }}</h1>
       <p>{{data[1]}}</p>
     </div>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapMutations, mapState } from 'vuex'
 import {introduction} from '../api'
 import contact from './Contact.vue'
 
@@ -27,6 +28,9 @@ export default {
     })
   },
   computed: {
+    ...mapState({
+      mainColor : 'mainColor'
+    }),
     newmsg() {
       return this.msg.replace('OOO', this.data[0])
     }

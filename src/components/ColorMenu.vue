@@ -4,13 +4,15 @@
     @mouseleave="show = false"
     @click="onClickSetColor">
 
-    <colorcircle
-      v-if="show"
-      v-for="(item, index) in colorList"
-      :circle-id="item"
-      :circle-name="`fade${colorList.length - index}`"
-      :key="item">
-    </colorcircle>
+    <!-- <div v-if="show"> -->
+      <colorcircle
+        v-for="(item, index) in colorList"
+        :circle-id="item"
+        :circle-name="`fade${colorList.length - index}`"
+        :is-show="show"
+        :key="item">
+      </colorcircle>
+    <!-- </div> -->
 
     <span class="fixed-color-circle"></span>
   </div>

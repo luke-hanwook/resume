@@ -1,11 +1,11 @@
 <template>
   <transition :name="circleName">
-    <span :id="circleId"></span>
+    <span :id="circleId" v-if="isShow"></span>
   </transition>
 </template>
 
 <script>
 export default {
-  props: ['circleId', 'circleName']
+  props: ['circleId', 'circleName', 'isShow']
 }
 </script>
