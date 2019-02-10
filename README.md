@@ -1,5 +1,9 @@
 # resume
 
+[Demo](https://luke-hanwook.github.io/resume/)
+
+My resume for web
+
 > A Vue.js project
 
 ## Build Setup
