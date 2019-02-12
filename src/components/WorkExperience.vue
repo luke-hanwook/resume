@@ -46,7 +46,6 @@ export default {
     })
   },
   created() {
-    console.log('career')
     career.fetch().then(list=>{
       this.data = list
     })

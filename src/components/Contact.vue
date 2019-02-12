@@ -24,9 +24,7 @@ export default {
     })
   },
   created() {
-    console.log('contact')
     contact.fetch().then(list=>{
-      console.log(list)
       this.data = list
     })
   }

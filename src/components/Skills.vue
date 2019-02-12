@@ -34,7 +34,6 @@ export default {
     })
   },
   created() {
-    console.log('skills')
     skills.fetch().then(list=>{
       this.skills = list
     })

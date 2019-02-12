@@ -18,7 +18,6 @@ export default {
     }
   },
   created() {
-    console.log('social')
     social.fetch().then(list=>{
       this.data = list
     })
